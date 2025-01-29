@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Врачи</title>
+    <!-- Добавьте ваши стили и скрипты здесь -->
+</head>
+<body>
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ведущие Специалисты</h2>
+        <p>Лучшие Специалисты наших клиник</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          {% for doctor in doctors %}
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>{{ doctor.name }}</h4>
+                <span>{{ doctor.specialty }}</span>
+                <p>{{ doctor.experience }} лет стажа работы</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+                <a href="{% url 'edit_doctor' doctor.pk %}">Редактировать</a>
+                <a href="{% url 'delete_doctor' doctor.pk %}">Удалить</a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          {% endfor %}
+        </div>
+        <a href="{% url 'add_doctor' %}">Добавить врача</a>
+      </div>
+
+    </section><!-- /Doctors Section -->
+</body>
+</html>
