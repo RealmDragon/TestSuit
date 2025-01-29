@@ -27,6 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'materials',
+    'bootstrap4',
+
+
 ]
 
 MIDDLEWARE = [
@@ -39,12 +43,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'taskmanager.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'taskmanager/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -57,7 +61,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'taskmanager.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
@@ -65,12 +69,12 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Используем PostgreSQL
-        'NAME': 'mydatabase',          # Имя вашей базы данных
-        'USER': 'myuser',              # Имя пользователя базы данных
-        'PASSWORD': 'mypassword',      # Пароль пользователя базы данных
-        'HOST': 'localhost',           # Хост базы данных
-        'PORT': '5432',               # Порт базы данных (по умолчанию 5432)
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'medical_site_db',
+        'USER': 'medical_user',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -111,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, 'taskmanager/main')
+    os.path.join(BASE_DIR, 'main/static')
 ]
 
 # Default primary key field type
