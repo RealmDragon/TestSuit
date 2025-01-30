@@ -65,9 +65,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_NAME', 'medical_site_db'),
-        'USER': os.getenv('DATABASE_USER', 'medical_user'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD', 'your_password'),
+        'NAME': os.getenv('DATABASE_NAME','medical_site_db'),
+        'USER': os.getenv('DATABASE_USER','medical_user'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD','your_password'),
         'HOST': 'db',  # Имя сервиса базы данных в docker-compose.yml
         'PORT': '5432',
     }

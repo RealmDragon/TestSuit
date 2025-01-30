@@ -3,6 +3,7 @@ from django.contrib.auth import login
 from .forms import CustomUserCreationForm
 from .models import Doctor
 from .forms import DoctorForm
+from .models import MedicalService
 
 def home(request):
     return render(request, 'index.html')
@@ -62,3 +63,7 @@ def delete_doctor(request, pk):
         doctor.delete()
         return redirect('doctors')
     return render(request, 'delete_doctor.html', {'doctor': doctor})
+
+def services(request):
+    services = MedicalService.objects.all()
+    return render(request, 'main/services.html', {'services': services})
