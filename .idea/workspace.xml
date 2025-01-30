@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7230c746-6810-4475-9ae3-ea19cd8fa82b" name="Changes" comment="Пуш от Ошибки">
+    <list default="true" id="7230c746-6810-4475-9ae3-ea19cd8fa82b" name="Changes" comment="Добавлена Карта и Данные с Адресами">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <workItem from="1738236826754" duration="3020000" />
       <workItem from="1738240162723" duration="5083000" />
       <workItem from="1738245276790" duration="2080000" />
-      <workItem from="1738247368684" duration="5052000" />
+      <workItem from="1738247368684" duration="6150000" />
     </task>
     <task id="LOCAL-00001" summary="Вторая Версия Сайта на проверку.">
       <option name="closed" value="true" />
@@ -177,7 +177,39 @@
       <option name="project" value="LOCAL" />
       <updated>1738250183866</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавлена Карта и Данные с Адресами">
+      <option name="closed" value="true" />
+      <created>1738255979517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738255979517</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавлена Карта и Данные с Адресами">
+      <option name="closed" value="true" />
+      <created>1738256015968</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738256015968</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Добавлена Карта и Данные с Адресами">
+      <option name="closed" value="true" />
+      <created>1738256044687</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738256044688</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Добавлена Карта и Данные с Адресами">
+      <option name="closed" value="true" />
+      <created>1738256260433</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738256260433</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +222,7 @@
     <MESSAGE value="Версия от 30.01.2025 исправления и добавления от 01:00" />
     <MESSAGE value="Версия от 30.01.2025 исправления и добавления от 14:00" />
     <MESSAGE value="Пуш от Ошибки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пуш от Ошибки" />
+    <MESSAGE value="Добавлена Карта и Данные с Адресами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена Карта и Данные с Адресами" />
   </component>
 </project>

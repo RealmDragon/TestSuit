@@ -3,26 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Services</title>
+    <title>Services</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4">Medical Services</h1>
+        <h1 class="my-4">Our Services</h1>
+
+        <p>Information about the cost of services can be found by calling our call center.</p>
+
         <div class="row">
-            {% for service in services %}
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="" class="card-img-top" alt="{{ service.name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ service.name }}</h5>
-                        <p class="card-text">{{ service.description }}</p>
-                        <p class="card-text"><strong>Price:</strong> ${{ service.price }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+          <div class="col-md-12">
+            <h3>Full price list with prices</h3>
+            <p>
+              <a href="#" class="btn btn-primary">Download in PDF format</a>
+              <a href="#" class="btn btn-success">Download in Excel format</a>
+            </p>
+          </div>
         </div>
+
+        <ul class="list-group my-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Consultation with a general practitioner</span>
+              <h5 class="badge badge-primary badge-pill">1500 ₽</h5>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Blood Test</span>
+             <h5 class="badge badge-primary badge-pill">800 ₽</h5>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+             <span>Urine Analysis</span>
+             <h5 class="badge badge-primary badge-pill">500 ₽</h5>
+         </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>ECG</span>
+            <h5 class="badge badge-primary badge-pill">1000 ₽</h5>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Ultrasound</span>
+              <h5 class="badge badge-primary badge-pill">2000 ₽</h5>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Consultation with an ophthalmologist</span>
+            <h5 class="badge badge-primary badge-pill">1800 ₽</h5>
+           </li>
+           <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Consultation with a dentist</span>
+           <h5 class="badge badge-primary badge-pill">1600 ₽</h5>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>Consultation with a neurologist</span>
+            <h5 class="badge badge-primary badge-pill">1700 ₽</h5>
+          </li>
+        </ul>
     </div>
 </body>
 </html>
