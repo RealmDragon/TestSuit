@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.753994, 37.622093], // Координаты центра карты
+                zoom: 10
+            });
+
+            var clinic1 = new ymaps.Placemark([55.753994, 37.622093], {
+                hintContent: 'Клиника 1',
+                balloonContent: 'Адрес клиники 1: г. Москва, ул. Примерная, д. 1'
+            });
+
+            var clinic2 = new ymaps.Placemark([55.763994, 37.632093], {
+                hintContent: 'Клиника 2',
+                balloonContent: 'Адрес клиники 2: г. Москва, ул. Примерная, д. 2'
+            });
+
+            var clinic3 = new ymaps.Placemark([55.743994, 37.612093], {
+                hintContent: 'Клиника 3',
+                balloonContent: 'Адрес клиники 3: г. Москва, ул. Примерная, д. 3'
+            });
+
+            myMap.geoObjects.add(clinic1);
+            myMap.geoObjects.add(clinic2);
+            myMap.geoObjects.add(clinic3);
+        }
+    </script>
 </head>
 <body>
-
+    <div class="container">
+        <h1 class="my-4">Contacts</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="map" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="col-md-6">
+                <h3>Адрес и Контакты Клиник</h3>
+                <p><strong>Адрес:</strong> г. Москва, ул. Вертуальный Переулок, д. 64</p>
+                <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+                <p><strong>Адрес:</strong> г. Москва, ул. Площадь Питонов, д. 89</p>
+                <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+                <p><strong>Адрес:</strong> г. Москва, ул. Мкадная , д. 43</p>
+                <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
