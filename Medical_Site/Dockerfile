@@ -1,10 +1,13 @@
-FROM python:3.9-slim
+# Используем официальный образ Python
+FROM python:3.11-slim
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+# Копируем requirements.txt и устанавливаем зависимости
+COPY app/requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app/
+# Копируем остальные файлы проекта
+COPY .. /app/
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

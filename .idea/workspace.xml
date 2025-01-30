@@ -4,22 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7230c746-6810-4475-9ae3-ea19cd8fa82b" name="Changes" comment="Версия от 29.01.2025 исправления и добавления">
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/migrations/0002_department_doctor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/templates/add_doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/templates/delete_doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/templates/departments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/templates/doctors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medical_Site/main/templates/edit_doctor.html" afterDir="false" />
+    <list default="true" id="7230c746-6810-4475-9ae3-ea19cd8fa82b" name="Changes" comment="Версия от 30.01.2025 исправления и добавления от 01:00">
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/materials/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/init-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medical_Site/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/migrations/0002_department_doctor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/migrations/0002_department_doctor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/about.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/about.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/departments-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/departments-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/departments-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/departments-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/departments-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/departments-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/departments-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/departments-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/departments-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/departments-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/doctors/doctors-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/doctors/doctors-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/doctors/doctors-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/doctors/doctors-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/doctors/doctors-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/doctors/doctors-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/doctors/doctors-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/doctors/doctors-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/gallery/gallery-8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/gallery/gallery-8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/hero-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/hero-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/testimonials/testimonials-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/testimonials/testimonials-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/testimonials/testimonials-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/testimonials/testimonials-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/testimonials/testimonials-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/testimonials/testimonials-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/testimonials/testimonials-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/testimonials/testimonials-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/img/testimonials/testimonials-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/img/testimonials/testimonials-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/scss/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/scss/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/aos/aos.cjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/aos/aos.cjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/aos/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/aos/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/aos/aos.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/aos/aos.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/aos/aos.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/aos/aos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/aos/aos.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/aos/aos.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/bootstrap-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/bootstrap-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/bootstrap-icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/bootstrap-icons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/bootstrap-icons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/bootstrap-icons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/bootstrap-icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/bootstrap-icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/css/prb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/css/prb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/brands.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/brands.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/brands.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/brands.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/fontawesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/fontawesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/fontawesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/regular.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/regular.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/regular.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/regular.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/solid.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/solid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/solid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/solid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/svg-with-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/svg-with-js.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/svg-with-js.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/svg-with-js.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v4-font-face.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v4-font-face.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v4-font-face.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v4-font-face.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v4-shims.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v4-shims.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v4-shims.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v4-shims.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v5-font-face.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v5-font-face.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/css/v5-font-face.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/css/v5-font-face.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-v4compatibility.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/fontawesome-free/webfonts/fa-v4compatibility.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/fontawesome-free/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/glightbox/css/glightbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/glightbox/css/glightbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/glightbox/css/glightbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/glightbox/css/glightbox.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/glightbox/js/glightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/glightbox/js/glightbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/glightbox/js/glightbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/glightbox/js/glightbox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/php-email-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/php-email-form/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/purecounter/purecounter_vanilla.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/purecounter/purecounter_vanilla.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/purecounter/purecounter_vanilla.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/purecounter/purecounter_vanilla.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/swiper/swiper-bundle.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/swiper/swiper-bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/swiper/swiper-bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/static/vendor/swiper/swiper-bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/vendor/swiper/swiper-bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/add_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/add_doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/delete_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/delete_doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/departments.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/departments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/doctors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/doctors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/edit_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/edit_doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/materials/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/materials/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/materials/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/materials/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +179,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -73,6 +223,8 @@
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site" />
+      <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site\app" />
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main\static" />
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main" />
     </key>
@@ -111,7 +263,8 @@
       <workItem from="1738171560179" duration="5101000" />
       <workItem from="1738176857987" duration="7987000" />
       <workItem from="1738186388987" duration="194000" />
-      <workItem from="1738186590462" duration="1614000" />
+      <workItem from="1738186590462" duration="1940000" />
+      <workItem from="1738228317314" duration="6647000" />
     </task>
     <task id="LOCAL-00001" summary="Вторая Версия Сайта на проверку.">
       <option name="closed" value="true" />
@@ -153,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738182671636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Версия от 30.01.2025 исправления и добавления от 01:00">
+      <option name="closed" value="true" />
+      <created>1738188524303</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738188524304</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +324,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Вторая Версия Сайта на проверку." />
     <MESSAGE value="Версия от 29.01.2025 исправления и добавления" />
-    <option name="LAST_COMMIT_MESSAGE" value="Версия от 29.01.2025 исправления и добавления" />
+    <MESSAGE value="Версия от 30.01.2025 исправления и добавления от 01:00" />
+    <option name="LAST_COMMIT_MESSAGE" value="Версия от 30.01.2025 исправления и добавления от 01:00" />
   </component>
 </project>

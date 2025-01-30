@@ -4,7 +4,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -15,7 +14,6 @@ SECRET_KEY = 'django-insecure-@b5t$yur@#0!x@yn1k^t#pd&ylbq!t941zlngi=-d=ag_^(@q=
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -29,8 +27,6 @@ INSTALLED_APPS = [
     'main',
     'materials',
     'bootstrap4',
-
-
 ]
 
 MIDDLEWARE = [
@@ -63,21 +59,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'medical_site_db',
-        'USER': 'medical_user',
-        'PASSWORD': 'your_password',
-        'HOST': 'localhost',
+        'NAME': os.getenv('DATABASE_NAME', 'medical_site_db'),
+        'USER': os.getenv('DATABASE_USER', 'medical_user'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', 'your_password'),
+        'HOST': 'db',  # Имя сервиса базы данных в docker-compose.yml
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -97,7 +91,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -108,7 +101,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
