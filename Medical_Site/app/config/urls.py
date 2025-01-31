@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('materials/', include('materials.urls')), # Подключение URL-адресов приложения materials
+    path('materials/', include('materials.urls')),  # Подключение URL-адресов приложения materials
 ]
 
 # Обработка статических файлов (корректно настроено, но требует проверки в settings.py)
