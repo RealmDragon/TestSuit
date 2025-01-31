@@ -1,0 +1,35 @@
+version: "3.9"  # Используем более новую версию, для лучшей совместимости
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: "DATABASE_NAME"
+      POSTGRES_USER: "DATABASE_USER"
+      POSTGRES_PASSWORD: "DATABASE_PASSWORD"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - default
+    restart: always # Добавлено для автоматического рестарта при сбоях
+
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile # Указали путь к Dockerfile
+    command: ["gunicorn", "--bind", "0.0.0.0:8000", "Medical_Site.wsgi:application"] # Изменена команда запуска
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - default
+    env_file:
+      - .env
+    volumes:
+      - .:/app # При необходимости монтируем текущую директорию для доступа к статическим файлам или шаблонам
+
+volumes:
+  postgres_data:
+networks:
+  default:

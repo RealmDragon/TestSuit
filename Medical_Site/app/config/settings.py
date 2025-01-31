@@ -8,12 +8,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@b5t$yur@#0!x@yn1k^t#pd&ylbq!t941zlngi=-d=ag_^(@q='
+SECRET_KEY = 'django-insecure-@b5t$yur@#0!x@yn1k^t#pd&ylbq!t941zlngi=-d=ag_^(@q=' # Измените это
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #  Установите в False для продакшена
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -66,8 +66,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DATABASE_NAME','medical_site_db'),
-        'USER': os.getenv('DATABASE_USER','medical_user'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD','your_password'),
+        'USER': os.getenv('DATABASE_USER','medical_user_db'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD','1997'),
         'HOST': 'db',  # Имя сервиса базы данных в docker-compose.yml
         'PORT': '5432',
     }
@@ -107,10 +107,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'main/static')
+    os.path.join(BASE_DIR, 'main/static'),
+     os.path.join(BASE_DIR, 'materials/static'), # Добавляем путь для materials
 ]
+
+MEDIA_URL = '/media/' # Добавлено
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Добавлено
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

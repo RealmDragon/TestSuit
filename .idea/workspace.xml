@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7230c746-6810-4475-9ae3-ea19cd8fa82b" name="Changes" comment="Обновления от 21:15">
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/main/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/materials/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/materials/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Medical_Site/app/materials/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init-db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/init-db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +82,11 @@
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\realm\PycharmProjects\TestSuit" />
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site" />
+      <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site\app\materials" />
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site\app" />
       <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main\static" />
-      <recent name="C:\Users\realm\PycharmProjects\TestSuit\taskmanager\main" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -111,7 +128,12 @@
       <workItem from="1738236826754" duration="3020000" />
       <workItem from="1738240162723" duration="5083000" />
       <workItem from="1738245276790" duration="2080000" />
-      <workItem from="1738247368684" duration="13572000" />
+      <workItem from="1738247368684" duration="14201000" />
+      <workItem from="1738328965794" duration="2965000" />
+      <workItem from="1738338999141" duration="343000" />
+      <workItem from="1738340153367" duration="5313000" />
+      <workItem from="1738347283889" duration="45000" />
+      <workItem from="1738347336748" duration="6033000" />
     </task>
     <task id="LOCAL-00001" summary="Вторая Версия Сайта на проверку.">
       <option name="closed" value="true" />
@@ -225,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738260951419</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Обновления от 21:15">
+      <option name="closed" value="true" />
+      <created>1738264471970</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738264471970</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
