@@ -1,15 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from .forms import CustomUserCreationForm
-from .models import Doctor
-from .forms import DoctorForm
-from .models import MedicalService
+from .models import Doctor, Department, MedicalService
 
 def home(request):
     return render(request, 'index.html')
 
 def services(request):
-    return render(request, 'services.html')
+    services = MedicalService.objects.all()
+    return render(request, 'main/services.html', {'services': services})
 
 def about(request):
     return render(request, 'about.html')
@@ -63,7 +62,3 @@ def delete_doctor(request, pk):
         doctor.delete()
         return redirect('doctors')
     return render(request, 'delete_doctor.html', {'doctor': doctor})
-
-def services(request):
-    services = MedicalService.objects.all()
-    return render(request, 'main/services.html', {'services': services})
