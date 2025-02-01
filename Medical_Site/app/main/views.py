@@ -8,7 +8,7 @@ def home(request):
 
 def services(request):
     services = MedicalService.objects.all()
-    return render(request, 'main/services.html', {'services': services})
+    return render(request, 'main1/services.html', {'services': services})
 
 def about(request):
     return render(request, 'about.html')

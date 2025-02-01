@@ -8,7 +8,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/app/main/templates" />
+        <option value="$MODULE_DIR$/Medical_Site/app/main/templates" />
       </list>
     </option>
   </component>
