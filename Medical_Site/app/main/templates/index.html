@@ -1,483 +1,225 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Medilab</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Medilab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Favicons -->
-  <link href="../static/img/favicon.png" rel="icon">
-  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="../static/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Medilab
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header sticky-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+8 800 333 24 71</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="../static/img/logo.png" alt=""> -->
-          <h1 class="sitename">Medilab</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="{% url 'home' %}" class="active">Главная<br></a></li>
-            <li><a href="{% url 'about' %}">О нас</a></li>
-            <li><a href="{% url 'services' %}">Услуги</a></li>
-            <li><a href="{% url 'departments' %}">Клиники</a></li>
-            <li><a href="{% url 'doctors' %}">Врачи</a></li>
-            <li><a href="{% url 'contacts' %}">Контакты</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        <a class="cta-btn d-none d-sm-block" href="{% url 'registration' %}">Регистрация</a>
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <img src="../static/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative">
-
-        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>Добро пожаловать в MEDILAB</h2>
-          <p>Мы предаставляем разные медицинские услуги</p>
-        </div><!-- End Welcome -->
-
-        <div class="content row gy-4">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Почему именно мы?</h3>
-              <p>
-                Только в нашей клиниках самые низкие цены и лучщие врачи страны
-              </p>
-              <div class="text-center">
-                <a href="#about" class="more-btn"><span>Подробней</span> <i class="bi bi-chevron-right"></i></a>
-              </div>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Medilab</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">О нас</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">Услуги</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="departments.html">Отделения</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="doctors.html">Врачи</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+         <li class="nav-item" id="register-btn-li">
+            <a class="nav-link" href="registration.html" id="register-btn">Регистрация</a>
+          </li>
+         <li class="nav-item" id="profile-icon-li" style="display: none">
+            <a class="nav-link" href="profile.html" id="profile-icon"> <i class="fas fa-user"></i></a>
+           </li>
+        </ul>
+  </div>
+</nav>
+<div class="container">
+          <section class="hero">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Добро пожаловать в Medilab</h1>
+                    <p>Качественная медицинская помощь для всей вашей семьи.</p>
+                     <div class="cta-buttons">
+                           <a href="contacts.html" class="btn btn-primary">Записаться на прием</a>
+                       </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="" alt="Медсестра" class="img-fluid rounded">
+                </div>
             </div>
-          </div><!-- End Why Box -->
+         </section>
 
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="d-flex flex-column justify-content-center">
-              <div class="row gy-4">
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
-                    <i class="bi bi-clipboard-data"></i>
-                    <h4>Профессиональные Диагнозы</h4>
-                    <p>Наши врачи всегда дают точные диагнозы и направления! </p>
-                  </div>
-                </div><!-- End Icon Box -->
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                    <i class="bi bi-gem"></i>
-                    <h4>Высокачественое обслуживание пациентов</h4>
-                    <p>Наши пациенты всегда довольны нашим персоналом и обслуживанием!</p>
-                  </div>
-                </div><!-- End Icon Box -->
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
-                    <i class="bi bi-inboxes"></i>
-                    <h4>Собственые Лаблотории</h4>
-                    <p>Наши клиники всегда имеют личные лаблотории для анализов пациентов!</p>
-                  </div>
-                </div><!-- End Icon Box -->
-
-              </div>
+         <section class="service-cards py-5">
+            <h2>Наши услуги</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-stethoscope fa-4x mb-3"></i>
+                            <h5 class="card-title">Консультации специалистов</h5>
+                            <p class="card-text">Опытные врачи различных профилей готовы помочь вам.</p>
+                            <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="card">
+                        <div class="card-body text-center">
+                           <i class="fas fa-flask fa-4x mb-3"></i>
+                            <h5 class="card-title">Диагностика</h5>
+                            <p class="card-text">Современное оборудование для точной диагностики.</p>
+                             <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="card">
+                        <div class="card-body text-center">
+                          <i class="fas fa-user-md fa-4x mb-3"></i>
+                            <h5 class="card-title">Лечение</h5>
+                            <p class="card-text">Индивидуальные программы лечения для каждого.</p>
+                             <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                          <i class="fas fa-wheelchair fa-4x mb-3"></i>
+                            <h5 class="card-title">Реабилитация</h5>
+                           <p class="card-text">Восстановление после болезней и травм.</p>
+                            <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <div class="card-body text-center">
+                              <i class="fas fa-hospital fa-4x mb-3"></i>
+                             <h5 class="card-title">Стационар</h5>
+                              <p class="card-text">Комфортные условия для стационарного лечения.</p>
+                              <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <div class="card-body text-center">
+                              <i class="fas fa-clinic-medical fa-4x mb-3"></i>
+                             <h5 class="card-title">Амбулатория</h5>
+                              <p class="card-text">Удобное амбулаторное лечение и консультации.</p>
+                             <a href="services.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                         </div>
+                    </div>
+                 </div>
             </div>
-          </div>
-        </div><!-- End  Content-->
-
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row gy-4 gx-5">
-
-          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
-            <img src="../static/img/about.jpg" class="img-fluid" alt="">
-            <a href="https://youtu.be/W5Dm2WCk8jg?si=2OSURPKgAdW-zDcI" class="glightbox pulsating-play-btn"></a>
-          </div>
-
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <h3>О Компании MediLab</h3>
-            <p>
-              Наша клиника, основанная в 2000 году, стала одним из пионеров в сфере частной медицины. С первых дней нашей работы мы ставим во главу угла здоровье, комфорт и благополучие каждого пациента. Наша главная цель – ваш довольный, здоровый и счастливый вид!
-
-Мы гарантируем вам уровень сервиса, превосходящий возможности государственных учреждений. Забудьте о бесконечных очередях, грубом обращении и потерянных анализах – у нас вас ждет внимательное отношение, профессионализм и забота о вашем времени. Мы ценим каждого пациента и стремимся создать максимально комфортные условия для вашего лечения. Ваше здоровье – наш главный приоритет!”
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="fa-solid fa-user-doctor"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Персонал</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="fa-regular fa-hospital"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Клиник</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="fas fa-flask"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Лаблотории</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="fas fa-award"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Награды</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-    </section><!-- /Services Section -->
-
-
-
-        </form>
-
-      </div>
-
-    </section><!-- /Appointment Section -->
-
-    <!-- Departments Section -->
-    <section id="departments" class="departments section">
-
-      <!-- Section Title -->
-
-    </section><!-- /Departments Section -->
-
-    <!-- Doctors Section -->
-
-
-    </section><!-- /Doctors Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
-
-      <!-- Section Title -->
-
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <div class="container">
-
-        <div class="row align-items-center">
-
-
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Галерея</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-5.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-6.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-7.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="../static/img/gallery/gallery-8.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="../static/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Адрес и Контакты</h2>
-      </div><!-- End Section Title -->
-
-      <div class="mb-5" data-aos="fade-up" data-aos-delay="200"
-      </div><!-- End Google Maps -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Адрес</h3>
-                <p>Страстной б-р, д. 4/1, 94, Москва, 125009</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Позвонить</h3>
-                <p>+8 800 333 24 71</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p>info@example.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-
+         </section>
+
+        <section class="about-section py-5 bg-light">
+            <div class="row align-items-center">
+                 <div class="col-md-6">
+                     <div class="video-container">
+                       <iframe
+                           src="https://www.youtube.com/embed/W5Dm2WCk8jg"
+                           frameborder="0"
+                           allowfullscreen
+                           class="rounded"
+                         ></iframe>
+                    </div>
+                 </div>
+                <div class="col-md-6">
+                    <h2>О нашей клинике</h2>
+                     <p>Наша клиника — это современное медицинское учреждение, обеспечивающее качественные медицинские услуги для всей семьи. Мы сочетаем опыт квалифицированных врачей, современное оборудование и индивидуальный подход к каждому пациенту.</p>
+                    <a href="about.html" class="btn btn-outline-secondary">Подробнее</a>
                 </div>
 
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+            </div>
+        </section>
+           <section class="doctors-section py-5">
+            <h2>Наши врачи</h2>
+            <div class="row">
+                  <div class="col-md-3 mb-4">
+                        <div class="doctor-card text-center">
+                                <img src="" alt="doctor" class="img-fluid rounded-circle doctor-image">
+                                <h4>Иван Иванович</h4>
+                                <p class="specialty">Хирург</p>
+                                <a href="doctors.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                     <div class="col-md-3 mb-4">
+                           <div class="doctor-card text-center">
+                                <img src="" alt="doctor" class="img-fluid rounded-circle doctor-image">
+                                <h4>Елена Петровна</h4>
+                                <p class="specialty">Терапевт</p>
+                                 <a href="doctors.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                           </div>
+                    </div>
+                     <div class="col-md-3 mb-4">
+                           <div class="doctor-card text-center">
+                                <img src="" alt="doctor" class="img-fluid rounded-circle doctor-image">
+                                <h4>Алексей Смирнов</h4>
+                                <p class="specialty">Кардиолог</p>
+                                 <a href="doctors.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                           </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                            <div class="doctor-card text-center">
+                                    <img src="" alt="doctor" class="img-fluid rounded-circle doctor-image">
+                                    <h4>Мария Кузнецова</h4>
+                                   <p class="specialty">Невролог</p>
+                                    <a href="doctors.html" class="btn btn-outline-secondary btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+            </div>
+        </section>
 
-        </div>
+         <section class="contact-section py-5 text-center">
+             <h2>Свяжитесь с нами</h2>
+            <p>Остались вопросы? Свяжитесь с нами удобным для вас способом.</p>
+             <div class="contact-info">
+               <p><i class="fas fa-phone-alt"></i> +7 (123) 456-78-90</p>
+                <p><i class="fas fa-envelope"></i> medilab@notyandex.ru</p>
+                 <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</p>
+           </div>
+             <a href="contacts.html" class="btn btn-success mt-3">Контакты</a>
+        </section>
 
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Medilab</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Страстной б-р, д. 4/1, 94</p>
-            <p>Москва, 125009</p>
-            <p class="mt-3"><strong>Телефон:</strong> <span>+8 800 333 24 71</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Быстрая Навигация</h4>
-          <ul>
-            <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'about' %}">О Копании</a></li>
-            <li><a href="{% url 'services' %}">Услуги</a></li>
-            <li><a href="{% url 'contacts' %}">Контакты</a></li>
-          </ul>
-        </div>
-
-      </div>
+        <footer>
+             <p>&copy; 2024 Medilab. Все права защищены.</p>
+       </footer>
     </div>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerBtnLi = document.getElementById('register-btn-li');
+        const profileIconLi = document.getElementById('profile-icon-li');
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Medilab</strong> <span>Все права сохранены, Сайт используеться для примера.</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
-    </div>
+         if (isLoggedIn === 'true') {
+              registerBtnLi.style.display = 'none';
+             profileIconLi.style.display = 'block';
 
-  </footer>
+        } else {
+              registerBtnLi.style.display = 'block';
+             profileIconLi.style.display = 'none';
+        }
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/vendor/php-email-form/validate.js"></script>
-  <script src="../static/vendor/aos/aos.js"></script>
-  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../static/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="../static/js/main.js"></script>
-
+    });
+</script>
 </body>
-
 </html>

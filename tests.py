@@ -1,8 +1,16 @@
-from django.test import TestCase
+import os
+import django
 
-from django.test import TestCase
-from .models import Department, Service, Contact, Doctor, MedicalService
+# Установите переменную окружения DJANGO_SETTINGS_MODULE
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.config.settings")
 
+# Инициализируйте Django
+django.setup()
+
+# Теперь вы можете импортировать и использовать Django модели и другие компоненты
+from django.core.management import call_command
+from django.test import TestCase
+from app.main.models import Department, Service, Contact, Doctor, MedicalService
 
 class ModelTests(TestCase):
 
@@ -25,8 +33,7 @@ class ModelTests(TestCase):
 
     def test_create_doctor(self):
         department = Department.objects.create(name="Test Department", description="Test Description")
-        doctor = Doctor.objects.create(name="Test Doctor", specialty="Test Specialty", experience=5,
-                                       department=department)
+        doctor = Doctor.objects.create(name="Test Doctor", specialty="Test Specialty", experience=5, department=department)
         self.assertEqual(doctor.name, "Test Doctor")
         self.assertEqual(doctor.specialty, "Test Specialty")
         self.assertEqual(doctor.experience, 5)

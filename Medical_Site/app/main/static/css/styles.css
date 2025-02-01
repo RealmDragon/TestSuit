@@ -1,0 +1,266 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Замените 'your-background.jpg' на путь к вашему фоновому изображению */
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #f8f9fa;
+    color: #2a2a2a;
+}
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins",  sans-serif;
+  --nav-font: "Raleway",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #2c4964;
+  --accent-color: #1977cc;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+/* Nav Menu Colors */
+:root {
+  --nav-color: #2c4964;
+  --nav-hover-color: #1977cc;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #2c4964;
+  --nav-dropdown-hover-color: #1977cc;
+}
+
+/* Color Presets */
+.light-background {
+  --background-color: #f1f7fc;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+      background-color: #f0f0f0;
+      padding: 10px;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+.nav-link{
+  margin: 0 10px;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+     background-color: #343a40;
+        color: #fff;
+        padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+/*--------------------------------------------------------------
+# Section Titles
+--------------------------------------------------------------*/
+.service-cards h2, .about-section h2, .doctors-section h2, .contact-section h2 {
+   text-align: center;
+   margin-bottom: 30px;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+   padding: 50px 0;
+}
+
+.hero h1 {
+   font-size: 2.5rem;
+   margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero img {
+     max-height: 400px;
+    object-fit: cover;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+/*--------------------------------------------------------------
+# Card Styles
+--------------------------------------------------------------*/
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1.0rem;
+}
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about-section img {
+   max-height: 350px;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Сохраняет пропорции видео 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для ссылки на видео*/
+.video-container a {
+    text-decoration: none; /* Убирает подчеркивание ссылки */
+    display: block; /* Чтобы ссылка работала корректно */
+    position: absolute; /* Позиционируем ссылку поверх iframe*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background: transparent; /* Делаем ссылку полностью прозрачной, чтобы клик работал через нее*/
+}
+
+.video-container a:hover {
+    text-decoration: none;
+    cursor: pointer;  /* Добавляем курсор, чтобы было понятно, что это кликабельная область */
+}
+/*--------------------------------------------------------------
+# Doctor Section
+--------------------------------------------------------------*/
+.doctors-section .doctor-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     background-color: #fff;
+}
+
+.doctors-section .doctor-card img {
+      max-width: 150px;
+    height: 150px;
+      object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.doctors-section .doctor-card p {
+    margin-bottom: 0;
+}
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact-section p{
+   margin-bottom: 8px;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+/*--------------------------------------------------------------
+# Button Styles
+--------------------------------------------------------------*/
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+     border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-outline-secondary {
+     color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #6c757d;
+     color: white;
+}
+.btn-success {
+     background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+     background-color: #218838;
+}

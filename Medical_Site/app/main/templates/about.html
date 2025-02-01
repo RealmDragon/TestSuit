@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Medilab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Medilab</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Главная</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">О нас <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">Услуги</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="departments.html">Отделения</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="doctors.html">Врачи</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+         <li class="nav-item" id="register-btn-li">
+            <a class="nav-link" href="registration.html" id="register-btn">Регистрация</a>
+          </li>
+         <li class="nav-item" id="profile-icon-li" style="display: none">
+            <a class="nav-link" href="profile.html" id="profile-icon"> <i class="fas fa-user"></i></a>
+           </li>
+        </ul>
+  </div>
+</nav>
 
+    <div class="container">
+        <h1>О нашей больнице</h1>
+    <main>
+        <section>
+            <h2>История</h2>
+            <p>Наша больница была основана в [год] и с тех пор стала одним из ведущих медицинских учреждений в регионе. Мы стремимся к тому, чтобы предоставить высококачественные медицинские услуги нашим пациентам.</p>
+        </section>
+        <section>
+            <h2>Миссия</h2>
+            <p>Наша миссия — улучшить качество жизни наших пациентов через предоставление высококачественных медицинских услуг и поддержки.</p>
+        </section>
+        <section>
+            <h2>Видение</h2>
+            <p>Мы видим себя лидером в области медицинских услуг, предоставляя инновационные и доступные медицинские услуги, которые улучшают качество жизни на пациентов.</p>
+        </section>
+        <section>
+            <h2>Основные услуги</h2>
+            <ul>
+                <li>Консультации специалистов</li>
+                <li>Диагностика и лечение</li>
+                <li>Реабилитация</li>
+                <li>Стационарное лечение</li>
+                <li>Амбулаторное лечение</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Медицинский персонал</h2>
+            <p>Наш медицинский состоит из высококвалифицированных специалистов, которые постоянно повышают свою квалификацию и используют современные методы лечения.</p>
+        </section>
+        <section>
+            <h2>Контакты</h2>
+            <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: medilab@notyandex.ru</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Наша больница. Все права защищены.</p>
+    </footer>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerBtnLi = document.getElementById('register-btn-li');
+        const profileIconLi = document.getElementById('profile-icon-li');
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+         if (isLoggedIn === 'true') {
+              registerBtnLi.style.display = 'none';
+             profileIconLi.style.display = 'block';
+
+        } else {
+              registerBtnLi.style.display = 'block';
+             profileIconLi.style.display = 'none';
+        }
+
+    });
+</script>
 </body>
 </html>
