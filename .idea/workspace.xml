@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="505a223c-7699-4c63-a0f6-4d8f4b852589" name="Changes" comment="" />
+    <list default="true" id="505a223c-7699-4c63-a0f6-4d8f4b852589" name="Changes" comment="Обновление за 02.02.2025">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/doctors.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/doctors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medical_Site/app/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Medical_Site/app/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +24,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,8 +46,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/realm/PycharmProjects/py_project&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -46,6 +62,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\realm\PycharmProjects\TestSuit\Medical_Site\tests" />
       <recent name="C:\Users\realm\PycharmProjects\TestingTest\Medical_Site\app\materials\static" />
       <recent name="C:\Users\realm\PycharmProjects\TestingTest" />
     </key>
@@ -190,21 +207,29 @@
       <updated>1738396768008</updated>
       <workItem from="1738396774180" duration="24111000" />
       <workItem from="1738446064876" duration="32000" />
+      <workItem from="1738446268652" duration="195000" />
+      <workItem from="1738446478828" duration="384000" />
+      <workItem from="1738446904274" duration="5000" />
+      <workItem from="1738484079021" duration="1353000" />
+      <workItem from="1738568957861" duration="9990000" />
+      <workItem from="1738656198826" duration="314000" />
     </task>
+    <task id="LOCAL-00001" summary="Обновление за 02.02.2025">
+      <option name="closed" value="true" />
+      <created>1738446350522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738446350522</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Medical_Site/app/main/templates/departments.html</url>
-          <line>124</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Обновление за 02.02.2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление за 02.02.2025" />
   </component>
 </project>

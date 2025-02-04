@@ -5,11 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Medilab</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .about-section {
+            padding: 40px 0; /* Отступ сверху и снизу */
+        }
+       .about-section h2 {
+           margin-bottom: 20px;
+           color: #007bff; /* Заголовок секции */
+           border-bottom: 2px solid #eee;
+           padding-bottom: 10px;
+       }
+        .about-section p {
+           font-size: 1.1em;
+           line-height: 1.6; /* Увеличиваем межстрочный интервал */
+           margin-bottom: 20px;
+       }
+       .about-section ul{
+           list-style: none; /* Убираем маркеры списка */
+            padding-left: 0;
+        }
+        .about-section ul li {
+            padding: 10px; /* Отступ */
+            border-bottom: 1px solid #eee; /* Разделитель */
+        }
+        .about-section .contacts{
+             margin-top: 30px; /* Отступ сверху */
+            border-top: 2px solid #eee; /* Разделитель */
+            padding-top: 20px;
+        }
+        .about-section .contacts p{
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+       .about-section .contacts i{
+          margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Medilab</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,7 +71,7 @@
         <a class="nav-link" href="contacts.html">Контакты</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto">
          <li class="nav-item" id="register-btn-li">
             <a class="nav-link" href="registration.html" id="register-btn">Регистрация</a>
           </li>
@@ -47,49 +83,55 @@
 </nav>
 
     <div class="container">
-        <h1>О нашей больнице</h1>
-    <main>
-        <section>
-            <h2>История</h2>
-            <p>Наша больница была основана в [год] и с тех пор стала одним из ведущих медицинских учреждений в регионе. Мы стремимся к тому, чтобы предоставить высококачественные медицинские услуги нашим пациентам.</p>
-        </section>
-        <section>
-            <h2>Миссия</h2>
-            <p>Наша миссия — улучшить качество жизни наших пациентов через предоставление высококачественных медицинских услуг и поддержки.</p>
-        </section>
-        <section>
-            <h2>Видение</h2>
-            <p>Мы видим себя лидером в области медицинских услуг, предоставляя инновационные и доступные медицинские услуги, которые улучшают качество жизни на пациентов.</p>
-        </section>
-        <section>
-            <h2>Основные услуги</h2>
-            <ul>
-                <li>Консультации специалистов</li>
-                <li>Диагностика и лечение</li>
-                <li>Реабилитация</li>
-                <li>Стационарное лечение</li>
-                <li>Амбулаторное лечение</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Медицинский персонал</h2>
-            <p>Наш медицинский состоит из высококвалифицированных специалистов, которые постоянно повышают свою квалификацию и используют современные методы лечения.</p>
-        </section>
-        <section>
-            <h2>Контакты</h2>
-            <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
-            <p>Телефон: +7 (123) 456-78-90</p>
-            <p>Email: medilab@notyandex.ru</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Наша больница. Все права защищены.</p>
-    </footer>
+        <div class="about-section">
+            <h1 class="mb-4 text-center">О нашей Компании</h1>
+            <main>
+                <section>
+                    <h2>История</h2>
+                    <p> MedicLab была основана в 1995 году и с тех пор стала одним из ведущих медицинских учреждений в регионе. Мы стремимся к тому, чтобы предоставить высококачественные медицинские услуги нашим пациентам. За время нашей работы, мы добились значительных успехов в области диагностики и лечения различных заболеваний.</p>
+                  <p>Наши врачи и медицинский персонал постоянно повышают свою квалификацию, чтобы быть в курсе последних достижений в медицине. Мы используем только проверенные методики и современное оборудование для обеспечения наилучшего качества обслуживания наших пациентов.</p>
+                </section>
+                <section>
+                    <h2>Миссия</h2>
+                    <p>Наша миссия — улучшить качество жизни наших пациентов через предоставление высококачественных медицинских услуг и поддержки. Мы стремимся обеспечить каждого пациента индивидуальным подходом и заботой, чтобы они чувствовали себя комфортно и уверенно на всех этапах лечения.</p>
+                 <p>Мы также работаем над тем, чтобы сделать наши медицинские услуги доступными для всех слоев населения, и активно участвуем в социальных программах для поддержки здоровья населения.</p>
+                </section>
+                <section>
+                    <h2>Видение</h2>
+                    <p>Мы видим себя лидером в области медицинских услуг, предоставляя инновационные и доступные медицинские услуги, которые улучшают качество жизни на пациентов. Мы постоянно развиваемся, чтобы соответствовать мировым стандартам в медицине, и работаем над расширением списка наших услуг.</p>
+                    <p>Мы также работаем над тем, чтобы привлекать лучших специалистов в свои ряды, и активно поддерживаем развитие молодых врачей и медсестер. Мы стремимся создать медицинский центр, где каждый пациент будет чувствовать себя в надежных руках.</p>
+                </section>
+                <section>
+                    <h2>Основные услуги нашей Компании</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Консультации специалистов</li>
+                        <li><i class="fas fa-check-circle"></i> Диагностика и лечение</li>
+                        <li><i class="fas fa-check-circle"></i> Реабилитация</li>
+                        <li><i class="fas fa-check-circle"></i> Стационарное лечение</li>
+                         <li><i class="fas fa-check-circle"></i> Амбулаторное лечение</li>
+                        <li><i class="fas fa-check-circle"></i> Программы профилактики</li>
+                       <li><i class="fas fa-check-circle"></i> Медицинские осмотры</li>
+                        <li><i class="fas fa-check-circle"></i> Домашний стационар</li>
+
+                    </ul>
+                </section>
+                <section>
+                    <h2>Медицинский персонал</h2>
+                    <p>Наш медицинский персонал состоит из высококвалифицированных специалистов, которые постоянно повышают свою квалификацию и используют современные методы лечения. В нашей команде работают врачи различных специальностей, а также опытные медсестры и младший медицинский персонал.</p>
+                    <p>Мы гордимся тем, что наши сотрудники с особым вниманием и заботой относятся к каждому пациенту, и работают в команде для достижения наилучших результатов лечения.</p>
+                </section>
+                <section class="contacts">
+                    <h2>Контакты</h2>
+                    <p><i class="fas fa-phone"></i> Телефон: +7 (123) 456-78-90</p>
+                    <p><i class="fas fa-envelope"></i> Email: medilab@notyandex.ru</p>
+                </section>
+            </main>
+        </div>
     </div>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const registerBtnLi = document.getElementById('register-btn-li');
         const profileIconLi = document.getElementById('profile-icon-li');

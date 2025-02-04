@@ -8,10 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #2a2a2a;
+        /* Добавьте сюда стили, специфичные для этой страницы, если нужно */
+        .doctor-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .doctor-item > div {
+            flex: 1;
+            padding-right: 10px;
+        }
+
+        .doctor-item button {
+            margin-left: 5px;
         }
         .container {
             background-color: #ffffff;
@@ -21,45 +36,14 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
-        h1, h2, h3 {
+         h1, h2, h3 {
             color: #007bff;
             margin-top: 1.5em;
         }
-        .price-badge {
-            font-size: 1.3em;
-            font-weight: bold;
-            padding: 0.5em 0.8em;
-            background-color: #c8f7c4;
-            color: #2a2a2a;
-        }
-        .list-group-item {
-            border-left: 4px solid #c8f7c4;
-        }
-        .list-group-item:hover {
-            background-color: #f2f2f2;
-            border-left: 4px solid #78c2ad;
-        }
-         .doctor-item {
-             border: 1px solid #ddd;
-             padding: 10px;
-             margin: 10px 0;
-             border-radius: 5px;
-             background-color: #f9f9f9;
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-         }
-         .doctor-item > div {
-              flex: 1;
-              padding-right: 10px;
-          }
-           .doctor-item button {
-                margin-left: 5px;
-            }
     </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Medilab</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -75,7 +59,7 @@
       <li class="nav-item">
         <a class="nav-link" href="services.html">Услуги</a>
       </li>
-      <li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link" href="departments.html">Отделения</a>
       </li>
        <li class="nav-item active">
@@ -85,7 +69,7 @@
         <a class="nav-link" href="contacts.html">Контакты</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto">
          <li class="nav-item" id="register-btn-li">
             <a class="nav-link" href="register.html" id="register-btn">Регистрация</a>
           </li>
@@ -95,12 +79,14 @@
         </ul>
   </div>
 </nav>
+
     <div class="container">
         <h1>Управление врачами</h1>
-        <h2>Список врачей</h2>
+
         <div id="doctors-list">
-            <!-- Врачи будут добавляться сюда -->
+            <!-- Список врачей будет отображаться здесь -->
         </div>
+
         <h2>Добавить нового врача</h2>
         <form id="add-doctor-form">
             <div class="form-group">
@@ -111,105 +97,150 @@
                 <label for="specialty">Специальность:</label>
                 <input type="text" class="form-control" id="specialty" required>
             </div>
-              <div class="form-group">
-                <label for="experience">Опыт:</label>
+            <div class="form-group">
+                <label for="experience">Опыт (лет):</label>
                 <input type="number" class="form-control" id="experience" required>
             </div>
-              <div class="form-group">
-                <label for="clinic">Клиника:</label>
-                  <select class="form-control" id="clinic" required>
-                      <option value="Клиника 1">Клиника 1</option>
-                      <option value="Клиника 2">Клиника 2</option>
-                      <option value="Клиника 3">Клиника 3</option>
-                  </select>
-              </div>
+            <div class="form-group">
+                <label for="photo">Фото:</label>
+                <input type="file" class="form-control-file" id="photo" accept="image/*">
+            </div>
             <button type="submit" class="btn btn-primary">Добавить</button>
         </form>
     </div>
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-           const doctorsList = document.getElementById('doctors-list');
-           const addDoctorForm = document.getElementById('add-doctor-form');
+            const doctorsList = document.getElementById('doctors-list');
+            const addDoctorForm = document.getElementById('add-doctor-form');
+            let doctors = []; // Массив для хранения данных о врачах
 
-           let doctors = [];
+            // Функция для отображения списка врачей
+             const renderDoctors = () => {
+                doctorsList.innerHTML = '';
+                doctors.forEach((doctor, index) => {
+                    const doctorItem = document.createElement('div');
+                    doctorItem.classList.add('doctor-item');
 
-           const renderDoctors = () => {
-               doctorsList.innerHTML = '';
-               doctors.forEach((doctor, index) => {
-                   const doctorItem = document.createElement('div');
-                   doctorItem.classList.add('doctor-item');
-                     doctorItem.innerHTML = `
+                    const photoSrc = doctor.photoUrl || 'placeholder.jpg';
+
+                    doctorItem.innerHTML = `
                         <div>
+                            <img src="" alt="${doctor.name}" width="50" height="50" style="margin-right: 10px;">
                             <strong>Имя:</strong> ${doctor.name}<br>
                             <strong>Специальность:</strong> ${doctor.specialty}<br>
-                             <strong>Опыт:</strong> ${doctor.experience} лет<br>
-                           <strong>Клиника:</strong> ${doctor.clinic}
+                            <strong>Опыт:</strong> ${doctor.experience} лет
                         </div>
-                         <div>
-                           <button class="btn btn-sm btn-secondary edit-btn" data-index="${index}">Редактировать</button>
+                        <div>
+                            <button class="btn btn-sm btn-secondary edit-btn" data-index="${index}">Редактировать</button>
                             <button class="btn btn-sm btn-danger delete-btn" data-index="${index}">Удалить</button>
                         </div>
                     `;
-
-                 doctorsList.appendChild(doctorItem);
-            });
-              // Добавить обработчики событий редактировать и удалить
-            document.querySelectorAll('.edit-btn').forEach(button => {
-              button.addEventListener('click', function(e) {
-              const index = e.target.getAttribute('data-index');
-                  editDoctor(index);
-              });
-           });
-
-            document.querySelectorAll('.delete-btn').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const index = e.target.getAttribute('data-index');
-                     deleteDoctor(index);
+                    doctorsList.appendChild(doctorItem);
                 });
-             });
 
+               addEditDeleteHandlers();
+             };
+
+
+            // Функция для добавления обработчиков событий к кнопкам
+           const addEditDeleteHandlers = () => {
+                document.querySelectorAll('.edit-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                         const index = e.target.dataset.index;
+                            editDoctor(index);
+                    });
+                });
+                document.querySelectorAll('.delete-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const index = e.target.dataset.index;
+                            deleteDoctor(index);
+                    });
+                });
+            }
+
+
+            // Функция для добавления врача
+            const addDoctor = async (name, specialty, experience, photoFile) => {
+                 let photoUrl = null;
+                  if (photoFile) {
+                      photoUrl = await readUploadedFileAsDataURL(photoFile);
+                  }
+                  doctors.push({ name, specialty, experience, photoUrl });
+                   renderDoctors();
+                };
+
+
+            // Функция для редактирования врача
+            const editDoctor = async (index) => {
+               const doctor = doctors[index];
+               const newName = prompt("Введите новое имя:", doctor.name);
+               const newSpecialty = prompt("Введите новую специальность:", doctor.specialty);
+               const newExperience = prompt("Введите новый опыт:", doctor.experience);
+
+                  // Создаем input для загрузки нового файла фото
+                  const fileInput = document.createElement('input');
+                  fileInput.type = 'file';
+                  fileInput.accept = 'image/*';
+
+                 fileInput.addEventListener('change', async (e) => {
+
+                   const newPhotoFile = e.target.files[0]
+                    let newPhotoUrl = doctor.photoUrl;
+                     if(newPhotoFile)
+                       {
+                        newPhotoUrl = await readUploadedFileAsDataURL(newPhotoFile);
+                        }
+                   if (newName) {
+                     doctors[index] = { name: newName, specialty: newSpecialty, experience: newExperience, photoUrl: newPhotoUrl };
+                      renderDoctors();
+                   }
+                  }, { once: true }); // Выполнить обработчик 1 раз
+
+                    fileInput.click(); // Открываем диалоговое окно выбора файла
+            };
+             // Функция для удаления врача
+            const deleteDoctor = (index) => {
+                if (confirm('Вы уверены, что хотите удалить этого врача?')) {
+                     doctors.splice(index, 1);
+                     renderDoctors();
+                }
+             };
+
+          // Читаем загруженный файл
+          const readUploadedFileAsDataURL = (inputFile) => {
+           return new Promise((resolve, reject) => {
+               const reader = new FileReader();
+              reader.onerror = reject;
+              reader.onload = () => {
+                     resolve(reader.result);
+                };
+               reader.readAsDataURL(inputFile);
+               });
            };
 
-         const addDoctor = (name, specialty, experience, clinic) => {
-           doctors.push({ name: name, specialty: specialty, experience: experience, clinic: clinic});
-            renderDoctors();
-          };
-           const editDoctor = (index) => {
-            const doctor = doctors[index];
-            const newName = prompt("Введите новое имя:", doctor.name);
-            const newSpecialty = prompt("Введите новую специальность:", doctor.specialty);
-            const newExperience = prompt("Введите новый опыт:", doctor.experience);
-           const newClinic = prompt("Введите новую клинику:", doctor.clinic);
-            if (newName && newSpecialty && newExperience && newClinic ) {
-              doctors[index] = { name: newName, specialty: newSpecialty, experience: newExperience, clinic: newClinic };
-              renderDoctors();
-            }
-           }
+          // Обработчик события отправки формы добавления врача
+          addDoctorForm.addEventListener('submit', async (event) => {
+              event.preventDefault();
 
-           const deleteDoctor = (index) => {
-             if (confirm('Вы уверены, что хотите удалить этого врача?')) {
-              doctors.splice(index, 1);
-                 renderDoctors();
-              }
-           }
+            const name = document.getElementById('name').value;
+            const specialty = document.getElementById('specialty').value;
+            const experience = document.getElementById('experience').value;
+            const photoFile = document.getElementById('photo').files[0];
 
+          await addDoctor(name, specialty, experience, photoFile);
+           addDoctorForm.reset();
+         });
 
-           addDoctorForm.addEventListener('submit', (event) => {
-               event.preventDefault();
-              const name = document.getElementById('name').value;
-              const specialty = document.getElementById('specialty').value;
-               const experience = document.getElementById('experience').value;
-              const clinic = document.getElementById('clinic').value;
-
-              addDoctor(name, specialty, experience, clinic);
-             addDoctorForm.reset();
-
-           });
-
-             renderDoctors()
+            // Загрузка начальных данных (тестовые данные)
+               doctors = [
+                { name: "Иван Иванов", specialty: "Терапевт", experience: 5,  photoUrl: "doctor1.jpg" },
+                { name: "Петр Петров", specialty: "Хирург", experience: 10, photoUrl: "doctor2.jpg" }
+              ];
+             renderDoctors(); // Первоначальное отображение списка врачей
         });
     </script>
     <script>

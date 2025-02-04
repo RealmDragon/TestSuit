@@ -1,5 +1,36 @@
 from django.contrib import admin
-from .models import Service, Contact
+from .models import Doctor, Service, Department, Appointment, Contact
+from django.contrib.auth.admin import UserAdmin
 
-admin.site.register(Service)
-admin.site.register(Contact)
+
+#Inline модели
+class AppointmentInline(admin.StackedInline):
+    model = Appointment
+    extra = 1
+
+@admin.register(Doctor)
+class DoctorAdmin(admin.ModelAdmin):
+    list_display = ('user', 'specialty', 'experience')
+    inlines = [AppointmentInline]
+
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'category')
+
+
+@admin.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description')
+
+
+@admin.register(Appointment)
+class AppointmentAdmin(admin.ModelAdmin):
+    list_display = ('patient', 'doctor', 'service', 'date_time', 'status')
+    list_filter = ('status', 'doctor', 'service', 'date_time')
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'message', 'created_at')
+    readonly_fields = ('created_at',)
