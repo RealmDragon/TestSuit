@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление врачами</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Добавьте сюда стили, специфичные для этой страницы, если нужно */
+        .doctor-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .doctor-item > div {
+            flex: 1;
+            padding-right: 10px;
+        }
+
+        .doctor-item button {
+            margin-left: 5px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+         h1, h2, h3 {
+            color: #007bff;
+            margin-top: 1.5em;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Medilab</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">О нас</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">Услуги</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="departments.html">Отделения</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Врачи <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </li>
+    </ul>
+      <ul class="navbar-nav ml-auto">
+         <li class="nav-item" id="register-btn-li">
+            <a class="nav-link" href="register.html" id="register-btn">Регистрация</a>
+          </li>
+         <li class="nav-item" id="profile-icon-li" style="display: none">
+            <a class="nav-link" href="profile.html" id="profile-icon"> <i class="fas fa-user"></i></a>
+           </li>
+        </ul>
+  </div>
+</nav>
+
+    <div class="container">
+        <h1>Управление врачами</h1>
+
+        <div id="doctors-list">
+            <!-- Список врачей будет отображаться здесь -->
+        </div>
+
+        <h2>Добавить нового врача</h2>
+        <form id="add-doctor-form">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="specialty">Специальность:</label>
+                <input type="text" class="form-control" id="specialty" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Опыт (лет):</label>
+                <input type="number" class="form-control" id="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Фото:</label>
+                <input type="file" class="form-control-file" id="photo" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const doctorsList = document.getElementById('doctors-list');
+            const addDoctorForm = document.getElementById('add-doctor-form');
+            let doctors = []; // Массив для хранения данных о врачах
+
+            // Функция для отображения списка врачей
+             const renderDoctors = () => {
+                doctorsList.innerHTML = '';
+                doctors.forEach((doctor, index) => {
+                    const doctorItem = document.createElement('div');
+                    doctorItem.classList.add('doctor-item');
+
+                    const photoSrc = doctor.photoUrl || 'placeholder.jpg';
+
+                    doctorItem.innerHTML = `
+                        <div>
+                            <img src="" alt="${doctor.name}" width="50" height="50" style="margin-right: 10px;">
+                            <strong>Имя:</strong> ${doctor.name}<br>
+                            <strong>Специальность:</strong> ${doctor.specialty}<br>
+                            <strong>Опыт:</strong> ${doctor.experience} лет
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-secondary edit-btn" data-index="${index}">Редактировать</button>
+                            <button class="btn btn-sm btn-danger delete-btn" data-index="${index}">Удалить</button>
+                        </div>
+                    `;
+                    doctorsList.appendChild(doctorItem);
+                });
+
+               addEditDeleteHandlers();
+             };
+
+
+            // Функция для добавления обработчиков событий к кнопкам
+           const addEditDeleteHandlers = () => {
+                document.querySelectorAll('.edit-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                         const index = e.target.dataset.index;
+                            editDoctor(index);
+                    });
+                });
+                document.querySelectorAll('.delete-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const index = e.target.dataset.index;
+                            deleteDoctor(index);
+                    });
+                });
+            }
+
+
+            // Функция для добавления врача
+            const addDoctor = async (name, specialty, experience, photoFile) => {
+                 let photoUrl = null;
+                  if (photoFile) {
+                      photoUrl = await readUploadedFileAsDataURL(photoFile);
+                  }
+                  doctors.push({ name, specialty, experience, photoUrl });
+                   renderDoctors();
+                };
+
+
+            // Функция для редактирования врача
+            const editDoctor = async (index) => {
+               const doctor = doctors[index];
+               const newName = prompt("Введите новое имя:", doctor.name);
+               const newSpecialty = prompt("Введите новую специальность:", doctor.specialty);
+               const newExperience = prompt("Введите новый опыт:", doctor.experience);
+
+                  // Создаем input для загрузки нового файла фото
+                  const fileInput = document.createElement('input');
+                  fileInput.type = 'file';
+                  fileInput.accept = 'image/*';
+
+                 fileInput.addEventListener('change', async (e) => {
+
+                   const newPhotoFile = e.target.files[0]
+                    let newPhotoUrl = doctor.photoUrl;
+                     if(newPhotoFile)
+                       {
+                        newPhotoUrl = await readUploadedFileAsDataURL(newPhotoFile);
+                        }
+                   if (newName) {
+                     doctors[index] = { name: newName, specialty: newSpecialty, experience: newExperience, photoUrl: newPhotoUrl };
+                      renderDoctors();
+                   }
+                  }, { once: true }); // Выполнить обработчик 1 раз
+
+                    fileInput.click(); // Открываем диалоговое окно выбора файла
+            };
+             // Функция для удаления врача
+            const deleteDoctor = (index) => {
+                if (confirm('Вы уверены, что хотите удалить этого врача?')) {
+                     doctors.splice(index, 1);
+                     renderDoctors();
+                }
+             };
+
+          // Читаем загруженный файл
+          const readUploadedFileAsDataURL = (inputFile) => {
+           return new Promise((resolve, reject) => {
+               const reader = new FileReader();
+              reader.onerror = reject;
+              reader.onload = () => {
+                     resolve(reader.result);
+                };
+               reader.readAsDataURL(inputFile);
+               });
+           };
+
+          // Обработчик события отправки формы добавления врача
+          addDoctorForm.addEventListener('submit', async (event) => {
+              event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const specialty = document.getElementById('specialty').value;
+            const experience = document.getElementById('experience').value;
+            const photoFile = document.getElementById('photo').files[0];
+
+          await addDoctor(name, specialty, experience, photoFile);
+           addDoctorForm.reset();
+         });
+
+            // Загрузка начальных данных (тестовые данные)
+               doctors = [
+                { name: "Иван Иванов", specialty: "Терапевт", experience: 5,  photoUrl: "doctor1.jpg" },
+                { name: "Петр Петров", specialty: "Хирург", experience: 10, photoUrl: "doctor2.jpg" }
+              ];
+             renderDoctors(); // Первоначальное отображение списка врачей
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerBtnLi = document.getElementById('register-btn-li');
+        const profileIconLi = document.getElementById('profile-icon-li');
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+         if (isLoggedIn === 'true') {
+              registerBtnLi.style.display = 'none';
+             profileIconLi.style.display = 'block';
+
+        } else {
+              registerBtnLi.style.display = 'block';
+             profileIconLi.style.display = 'none';
+        }
+
+    });
+</script>
+</body>
+</html>
