@@ -120,7 +120,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738757448724</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Обновления от 05.02.2025">
+      <option name="closed" value="true" />
+      <created>1738758882719</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738758882719</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Обновления от 05.02.2025">
+      <option name="closed" value="true" />
+      <created>1738758895839</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738758895839</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Обновления от 05.02.2025">
+      <option name="closed" value="true" />
+      <created>1738759135967</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738759135967</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">

@@ -1,15 +1,8 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Doctor, Service, Department, Appointment, Contact
-from .forms import CustomUserCreationForm, DoctorForm
-
-import os
-import django
-
-if not os.environ.get('DJANGO_SETTINGS_MODULE'):
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
-    django.setup()
+from main.models import Doctor, Service, Department, Appointment, Contact
+from main.forms import CustomUserCreationForm, DoctorForm
 
 class ModelTests(TestCase):
     """Тесты моделей."""
