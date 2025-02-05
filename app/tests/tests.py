@@ -8,7 +8,7 @@ import os
 import django
 
 if not os.environ.get('DJANGO_SETTINGS_MODULE'):
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medical_site.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
     django.setup()
 
 class ModelTests(TestCase):
