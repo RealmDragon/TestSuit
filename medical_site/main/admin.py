@@ -1,7 +1,6 @@
 from django.contrib import admin
-from materials.models import Appointment
-from main.models import Doctor, Service, Department
-from django.contrib.auth.admin import UserAdmin
+from medical_site.materials.models import Appointment
+from medical_site.main.models import Doctor, Service, Department
 
 
 #Inline модели

@@ -1,5 +1,5 @@
 from django.urls import path
-from config import views
+from medical_site.medical_site import views
 
 app_name = 'materials'
 

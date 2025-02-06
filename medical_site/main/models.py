@@ -1,4 +1,8 @@
+
 from django.db import models
+from django.contrib.auth import get_user_model
+
+User = get_user_model()  # Use get_user_model() for User
 
 class Department(models.Model):
     name = models.CharField(max_length=100)
@@ -23,8 +27,6 @@ class Contact(models.Model):
     def __str__(self):
         return self.address
 
-
-
 class Doctor(models.Model):
     name = models.CharField(max_length=100)
     specialty = models.CharField(max_length=100)
@@ -35,11 +37,18 @@ class Doctor(models.Model):
     def __str__(self):
         return self.name
 
-class MedicalService(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='services/')
+class Appointment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    date = models.DateTimeField()
+    status = models.CharField(
+        max_length=20,
+        choices=[
+            ('pending', 'Pending'),
+            ('confirmed', 'Confirmed'),
+            ('completed', 'Completed')
+        ]
+    )
 
     def __str__(self):
-        return self.name
+        return f"{self.user.username} - {self.service.name} - {self.date}"

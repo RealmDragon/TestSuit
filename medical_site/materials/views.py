@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from materials.models import Material
-from main.forms import Service
+from medical_site.materials.models import Material
+
 
 def material_list(request):
     """Отображает список всех материалов."""
