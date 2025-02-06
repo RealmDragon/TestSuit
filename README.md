@@ -22,7 +22,64 @@
 
 ## Структура проекта
 
-TestSuit/ ├── .env # Файл с переменными окружения ├── Dockerfile # Файл для сборки Docker-образа ├── docker-compose.yaml # Файл для оркестрации Docker-контейнеров ├── init-db.sql # SQL-скрипт для инициализации БД ├── Medical_Site/ # Директория с Django-проектом │ ├── Medical_Site/ # Основной каталог Django-проекта │ │ ├── init.py │ │ ├── settings.py # Файл с настройками проекта │ │ ├── urls.py # Файл маршрутизации проекта │ │ ├── asgi.py │ │ └── wsgi.py # Файл для запуска WSGI-приложения │ ├── app/ # Директория приложения │ │ ├── init.py │ │ ├── requirements.txt # Файл с зависимостями │ │ ├── main/ # Папка с приложением main │ │ │ ├── models.py │ │ │ ├── views.py │ │ │ ├── urls.py │ │ │ └── static/ # Статические файлы │ │ └── materials/ # Папка с приложением materials │ │ ├── models.py │ │ ├── views.py │ │ └── urls.py │ └── manage.py # Файл для управления Django-проектом └── README.md # Этот файл
+medical_site/  (Project Root)
+├── app/
+│   ├── migrations/
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_department_doctor.py
+│   │   └── 0003_medicalservice.py
+│   │   └── __init__.py
+│   ├── static/
+│   │   ├── css/
+│   │   │   ├── Backgroundmed.jpg
+│   │   │   └── styles.css
+│   │   ├── js/
+│   │   └── vendor/
+│   ├── templates/
+│   │   ├── admin/
+│   │   ├── about.html
+│   │   ├── add_doctor.html
+│   │   ├── appointment.html
+│   │   ├── contacts.html
+│   │   ├── delete_doctor.html
+│   │   ├── departments.html
+│   │   ├── doctors.html
+│   │   ├── edit_doctor.html
+│   │   ├── index.html
+│   │   ├── profile.html
+│   │   ├── registration.html
+│   │   └── services.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── medical_site/ (Django Project Directory)
+│   ├── materials/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── media/
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── venv/         (Virtual Environment)
+├── .env
+├── .gitignore
+├── docker-compose.yaml
+├── Dockerfile
+├── init-db.sql
+├── manage.py
+├── pytest.ini
+├── README.md
+└── requirements.txt
 
 ## Настройка и запуск
 
