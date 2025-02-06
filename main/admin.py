@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Doctor, Service, Department, Appointment, Contact
+from materials.models import Appointment
+from main.models import Doctor, Service, Department
 from django.contrib.auth.admin import UserAdmin
 
 
