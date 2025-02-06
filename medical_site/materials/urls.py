@@ -1,5 +1,5 @@
 from django.urls import path
-from medical_site.medical_site import views
+from medical_site.materials import views
 
 app_name = 'materials'
 

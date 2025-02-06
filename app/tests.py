@@ -1,8 +1,8 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
-from medical_site.main.models import Doctor, Service, Department, Appointment, Contact
-from medical_site.main.forms import CustomUserCreationForm, DoctorForm
+from app.models import Doctor, Service, Department, Appointment, Contact
+from app.forms import CustomUserCreationForm
 
 class ModelTests(TestCase):
     """Тесты моделей."""
