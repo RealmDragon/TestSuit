@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'medical_site',
-    'materials',
     'bootstrap4',
 ]
 
