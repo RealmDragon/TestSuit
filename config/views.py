@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Material
+from materials.models import Material
 from .forms import MaterialForm # если у вас есть форма
 
 def material_list(request):
