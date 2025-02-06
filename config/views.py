@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from materials.models import Material
-from .forms import MaterialForm # если у вас есть форма
+from main.forms import MaterialForm # если у вас есть форма
 
 def material_list(request):
     """Отображает список всех материалов."""

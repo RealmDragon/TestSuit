@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
-from .forms import CustomUserCreationForm
-from .models import Doctor, Department, MedicalService
+from main.forms import CustomUserCreationForm
+from materials.models import Doctor, Department, MedicalService
 
 def home(request):
     return render(request, 'index.html')
 
 def services(request):
     services = MedicalService.objects.all()
-    return render(request, 'main1/services.html', {'services': services})
+    return render(request, 'main/services.html', {'services': services})
 
 def about(request):
     return render(request, 'about.html')
@@ -37,23 +37,23 @@ def doctors(request):
 
 def add_doctor(request):
     if request.method == 'POST':
-        form = DoctorForm(request.POST, request.FILES)
+        form = Doctor(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('doctors')
     else:
-        form = DoctorForm()
+        form = Doctor()
     return render(request, 'add_doctor.html', {'form': form})
 
 def edit_doctor(request, pk):
     doctor = get_object_or_404(Doctor, pk=pk)
     if request.method == 'POST':
-        form = DoctorForm(request.POST, request.FILES, instance=doctor)
+        form = Doctor(request.POST, request.FILES, instance=doctor)
         if form.is_valid():
             form.save()
             return redirect('doctors')
     else:
-        form = DoctorForm(instance=doctor)
+        form = Doctor(instance=doctor)
     return render(request, 'edit_doctor.html', {'form': form})
 
 def delete_doctor(request, pk):
