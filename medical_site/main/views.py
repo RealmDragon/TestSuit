@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 
 from medical_site.main.forms import CustomUserCreationForm
-from medical_site.main.models import Doctor, Department, MedicalService
+from medical_site.main.models import Doctor, Department, Service
 
 def home(request):
     return render(request, 'index.html')
 
 def services(request):
-    services = MedicalService.objects.all()
+    services = Service.objects.all()
     return render(request, 'main/services.html', {'services': services})
 
 def about(request):
