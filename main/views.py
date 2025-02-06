@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
-from main.forms import CustomUserCreationForm
-from materials.models import Doctor, Department, MedicalService
+from main.models import Doctor, Department, MedicalService
 
 def home(request):
     return render(request, 'index.html')
