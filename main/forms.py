@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
 
 class Doctor(models.Model):
@@ -45,3 +46,21 @@ class Contact(models.Model):
     email = models.EmailField()
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        fields = UserCreationForm.Meta.fields + ('email', 'first_name', 'last_name')
+        labels = {
+            'username': 'Имя пользователя',
+            'email': 'Email',
+            'first_name': 'Имя',
+            'last_name': 'Фамилия',
+            'password1': 'Пароль',
+            'password2': 'Повторите пароль',
+        }
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+        }
